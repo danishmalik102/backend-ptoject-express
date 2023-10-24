@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 let sequelize = require("../../comman/dbConnection");
-let course = sequelize.define(
-    "product",
+let products = sequelize.define(
+    "products",
     {
       id: {
         primaryKey: true,
@@ -12,28 +12,26 @@ let course = sequelize.define(
         allowNull: true,
         type: DataTypes.STRING,
       },
-     
-      : {
-        
+      productDescription:{
         allowNull: false,
         type: DataTypes.STRING,
-        validate: { isEmail: true },
       },
-      phoneNumber: {
-        allowNull: false,
-        type: DataTypes.INTEGER,
-      },
-      password: {
-        
-      }
-      
+    productPrice: {
+      allowNull: false,
+      type: DataTypes.STRING,
     },
+    productInventory:{
+      allowNull: false,
+      type: DataTypes.STRING,
+    },
+  },
     {
       timestamps: true,
       paranoid: true,
       sequelize,
-      modelName: "user",
+      modelName: "users",
     }
+  
   );
-  module.exports = user;
+  module.exports = users;
   

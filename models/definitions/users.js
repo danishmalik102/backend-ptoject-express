@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 let sequelize = require("../../comman/dbConnection");
-let course = sequelize.define(
-    "user",
+let users = sequelize.define(
+    "users",
     {
       id: {
         primaryKey: true,
@@ -24,16 +24,17 @@ let course = sequelize.define(
         type: DataTypes.INTEGER,
       },
       password: {
-        
-      }
+        allowNull: false,
+        type: DataTypes.STRING
+      },
       
     },
     {
       timestamps: true,
       paranoid: true,
       sequelize,
-      modelName: "user",
+      modelName: "users",
     }
   );
-  module.exports = user;
+  module.exports = users;
   

@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 let sequelize = require("../../comman/dbConnection");
-let course = sequelize.define(
+let categories  = sequelize.define(
     "categories",
     {
         id: {
@@ -9,7 +9,7 @@ let course = sequelize.define(
           type: DataTypes.INTEGER,
         },
 
-    categoryNmae: {
+    categoryName: {
         allowNull: true,
       type: DataTypes.STRING,
     },
