@@ -1,7 +1,8 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const config = require("../config");
-const { models } = require("../models/definitions");
+//const { models } = require("../models/definitions");
+const user = require("../models/definitions/users");
 let tokens = [];
 function generateAccessToken(user) {
   return jwt.sign(user, config.jwt);

@@ -1,11 +1,13 @@
-const { models } = require("../models/definitions");
+//const { models } = require("../models/definitions");
+const cart = require("../models/definitions/cart");
+const products = require("../models/definitions/products");
 
 module.exports = {
     addProductToCart: async (userID, productID) => {
-        const result = await models.cart.findOne({ where: { userID } });
+        const result = await cart.findOne({ where: { userID } });
         if (result) {
           // Find the product based on the product ID
-          const product = await models.products.findByPk(productID);
+          const product = await products.findByPk(productID);
     
           if (product) {
             // Add the product to the user's cart

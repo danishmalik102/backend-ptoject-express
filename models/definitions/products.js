@@ -29,9 +29,9 @@ let products = sequelize.define(
       timestamps: true,
       paranoid: true,
       sequelize,
-      modelName: "users",
+      modelName: "products",
     }
   
   );
-  module.exports = users;
+  module.exports = products;
   

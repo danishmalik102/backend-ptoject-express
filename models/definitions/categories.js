@@ -22,5 +22,5 @@ let categories  = sequelize.define(
       modelName: "categories",
     }
   );
-  module.exports = user;
+  module.exports = categories;
   
