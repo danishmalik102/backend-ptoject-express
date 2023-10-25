@@ -66,9 +66,7 @@ cart.belongsToMany(product, {
 });
 
 const models = sequelize.models;
-
+console.log(models);
 const db = {};
 db.sequelize = sequelize;
-console.log(models);
-
 module.exports = { db, models };
